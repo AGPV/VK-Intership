@@ -36,5 +36,6 @@ def findgamefolder():
 
 videosettings = findgamefolder()+"\\game\\dac\\cfg\\video.txt"
 replacelines(videosettings, newWidth, newHeight)
+launchfile = "\""+str(findgamefolder()+"\\game\\bin\\win64\\underlords.exe").replace("\\\\", "\\")+"\""
 
-os.system("D:\\SteamLibrary\\steamapps\\common\\Underlords\\game\\bin\\win64\\underlords.exe")
+os.system(launchfile)
