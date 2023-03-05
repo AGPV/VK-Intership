@@ -41,7 +41,9 @@ def findsteampath():
         ValidHardPaths = ["None"]
     #print("Registry64: " + str(Path2)+"|"+ "Registry32: "+ str(Path3)+"|"+ "Start Menu Shortcut: "+ str(Path1Res)+"|"+ "Possible Locations: " + ', '.join(ValidHardPaths)+"|")
     paths = [Path1Res, Path2, Path3, ValidHardPaths]
+    print(paths)
     for path in paths:
-        if path != "None":
+        if path != "None" and path != False and path != None:
             steampath = str(path).replace("steam.exe", "").replace("['", "").replace("']", "")
-    return(steampath)
+            return(steampath)
+    return("Steam.exe not found")
